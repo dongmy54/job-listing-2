@@ -1,7 +1,13 @@
 class Admin::JobsController < ApplicationController
 before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
 before_action :require_is_admin
+	before_action :validates_search_key, only: [:search]
+
 layout "admin"
+
+def search
+	@jobs = Job.ransack({:title_or_description_cont => @q}).result(distinct: true)
+end
 
 def show
 	@job = Job.find(params[:id])
@@ -55,7 +61,10 @@ def destroy
 	redirect_to admin_jobs_path,alert: 'Job deleted'
 end
 
-
+protected
+def validates_search_key
+	@q = params[:query_string].gsub(/\\|\'|\/|\?/, "") if params[:query_string].present?
+end
 
 private
 

@@ -9,11 +9,15 @@ Rails.application.routes.draw do
     		member do
     			post :publish
     			post :hide
-    		end
+            end
+               
             resources :resumes
         end
     end
     resources :jobs do
         resources :resumes
+         collection do
+                    get :search
+            end
     end
 end
