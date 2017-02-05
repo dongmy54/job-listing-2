@@ -20,63 +20,7 @@
  @import "font-awesome";
  @import url(http://fonts.googleapis.com/css?family=Roboto);
 
-
- .jumbotron {
- background-image:url('http://www.businessnewsdaily.com/images/i/000/012/245/original/jobsearch.jpg?1472048462');
- background-repeat: no-repeat;
- background-size: cover;
- back-bottom: 110px;
- }
-
- .title {
-  font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
-  text-align: left;
-  margin-top: 200px;
-  margin-bottom: 80px;
- }
-
-.slogan {
-	margin-top: 10px;
-	margin-bottom: 50px;
-	text-align: left;
-	color: #594104;
-	top: 12px;
-}
-
-.lead {
-	margin-bottom: 60px;
-	text-align: center;
-	color: white;
-}
-
-.caption {
-	margin: 30px;
-	text-align:center;
-	top: 20px;
-}
-
-.thumbanil {
-	border: 0 none;
-	box-shadow: none;
-	margin-top: 60px;
-}
-
-.custab{
-	border: 1px solid #ccc;
-
-	padding: 5px;
-	margin: 5% 0;
-	box-shadow: 3px 3px 2px #ccc;
-
-	transition: 0.5s;
-}
-
-.custab:hover{
-	box-shadow: 3px 3px 0px transparent;
-	transition: 0.5s;
-}
-
-/****** LOGIN MODAL ******/
+ /****** LOGIN MODAL ******/
 .loginmodal-container {
   padding: 30px;
   max-width: 350px;
@@ -170,4 +114,46 @@
 .login-help{
   font-size: 12px;
 }
+
+
+.navbar {
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 14px !important;
+    letter-spacing: 0px;
+    opacity:0.9;
+    width: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+    margin-left: -100
+
+}
+
+body{
+ margin: 0px;
+}
+
+
+
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#29292c !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.btn-danger {
+    color: #fff;//字体颜色
+    background-color: #2d2d30;//背景颜色
+    border-color: #2d2d30;//边框颜色
+}
+
+
 

@@ -1,21 +1,19 @@
-<nav class="navbar navbar-default" role="navigation">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
-    <!-- Brand and toggle get ground for better mobile display -->
+    <!-- Brand and toggle get ground for better mobile display  -->
     <div class="navbar-header">
-       <a class="navbar-brand" href="/">Job Listing </a>
+       <a class="navbar-brand" href="/">蓝莓招聘</a>
        </div>
+
 
        <!-- Collect the nav links, forms, and other content for toggling -->
        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav navbar-right">
 
-          
            <% if !current_user %>
-              <!-- <li><%= link_to("注册", new_user_registration_path) %> </li>
-              <li><%= link_to("登入", new_user_session_path) %></li> -->
-               <li><a href="#" data-toggle="modal" data-target="#signup-modal">注册</a></li>
-          <li><a href="#" data-toggle="modal" data-target="#login-modal">登入</a></li>
-           
+              <li><%= link_to("注册", new_user_registration_path) %> </li>
+              <li><%= link_to("登入", new_user_session_path) %></li>
               <% else %>
               <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -32,12 +30,15 @@
                      <li><%= link_to("登出", destroy_user_session_path, method: :delete) %> </li>
                  </ul>
                 </li>
-                <% end %>        	
+                <% end %>         
            </ul>
         </div>
         <!-- /.navbar-collapse -->
         </div>
-          <!-- /.container-fluid -->
+
+</nav>
+
+<!-- /.container-fluid -->
           <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
   <div class="modal-dialog" role="document">
     <div class="loginmodal-container">
@@ -74,4 +75,3 @@
     </div>
   </div>
 </div>
-</nav>
