@@ -1,5 +1,71 @@
-<h1> <%= @job.title %> </h1>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
 
-<P>
-	<%= simple_format(@job.description) %>
-</P>
+.information {
+	font-size: 22px;
+	margin-left: -30px;
+	text-align:left; 
+}
+.container-width {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+	
+</style>
+</head>
+
+
+<body>
+<br><br><br><br>
+<h1 style="text-align: center;">欢迎来到蓝莓招聘！</h1>
+
+    <div class="container-width">
+      <div class="row">
+  <div class="col-sm-5 information">
+  	<img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1486368840112&di=63512e5945e7f0e61001b26dd4f08886&imgtype=0&src=http%3A%2F%2Fsc.jb51.net%2Fuploads%2Fallimg%2F141030%2F11-141030152T3P1.jpg" alt="Mountain View" style="float:right;width:400px;height:300px;">
+  </div>
+  <div class="col-sm-7">
+  	<div class="container">
+  <form class="form-horizontal">
+  <div class="information">
+
+  <br>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">岗位:</label>
+      <div class="col-sm-10">
+        <p class="form-control-static"><%= @job.title %> </p>
+      </div>
+    </div>
+    
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">要求:</label>
+      <div class="col-sm-10">
+        <p class="form-control-static"><%= @job.description %> </p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">薪资:</label>
+      <div class="col-sm-10">
+        <p class="form-control-static"><%= @job.wage_lower_bound %>—<%= @job.wage_upper_bound %> </p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="email">联系:</label>
+      <div class="col-sm-10">
+        <p class="form-control-static"><%= @job.contact_email %> </p>
+      </div>
+    </div>
+    </div>
+    </form>
+    </div>
+    
+  </div>
+</div>
+    </div>
+
+
+
+

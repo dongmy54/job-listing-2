@@ -154,3 +154,13 @@ body{
     background-color: #2d2d30;//背景颜色
     border-color: #2d2d30;//边框颜色
 }
+
+.btn-recruit {
+  background-color: #2d2d30;
+  color: #fff;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #2d2d30;
+}
+

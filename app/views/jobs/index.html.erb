@@ -1,7 +1,14 @@
 
+
+
+
+</div>
+<br><br><br>
 <%= render "search_bar" %>
+<%= link_to("我要招人", new_job_path, :class => "btn btn-primary active btn-lg" ) 
+%>
 <div class="dropdown clearfix pull-right">
-    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <button class="btn btn-primary active dropdown-toggle btn-md" type="button" id="dropdownMenuDivider" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
       排序
         <span class="caret"></span>
     </button>
@@ -23,10 +30,11 @@
     <thead>
         <tr>
             <td>
-                职缺</td>
+                职位</td>
             <td>薪资下限</td>
             <td>薪资上限</td>
-            <td>刊登时间</td>
+            <td>联系邮箱</td>
+            <td>发布时间</td>
         </tr>
 
     </thead>
@@ -41,6 +49,9 @@
             </td>
             <td>
                 <%= job.wage_upper_bound %>
+            </td>
+            <td>
+                <%= job.contact_email %>
             </td>
             <td>
                 <%= job.created_at %>
