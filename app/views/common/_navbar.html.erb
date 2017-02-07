@@ -66,7 +66,7 @@
         <%= f.error_notification %>
         <div class="form-inputs">
           <%= f.input :email, required: true, autofocus: true, :label => "邮箱"  %>
-          <%= f.input :password, required: true, :label => "岗位", hint: ("#{@minimum_password_length} characters minimum"  if @minimum_password_length) %>
+          <%= f.input :password, required: true, :label => "密码", hint: ("#{@minimum_password_length} characters minimum"  if @minimum_password_length) %>
           <%= f.input :password_confirmation, required: true, :label => "确认密码"  %>
         </div>
         <div class="form-actions">
